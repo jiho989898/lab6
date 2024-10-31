@@ -17,7 +17,7 @@ pipeline {
     stage('deploy -> master') {
       steps {
         sh '''
-        ansible-playbook /home/user1/play.yml
+        ansible-playbook ./play.yml
         '''
       }
     }
