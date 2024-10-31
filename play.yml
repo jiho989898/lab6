@@ -1,10 +1,10 @@
 ---
-- name: deploy,svc
+- name: 서비스 구성 배포
   hosts: master
-  gather_fact: true
+  gather_facts: true
   become: true
-
   tasks:
-    - name: deploy_svc.yml -> master
+    - name: deploy_svc.yml을 master에 복사
+      copy:
         src: ./deploy_svc.yml
         dest: /home/user1/deploy_svc.yml
