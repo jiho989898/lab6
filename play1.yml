@@ -5,4 +5,4 @@
   become: true
   tasks:
     - name: deploy_svc.yml 실행
-      shell: "kubectl apply -f deploy_svc.yml"
+      shell: "sudo kubectl apply -f deploy_svc.yml"
