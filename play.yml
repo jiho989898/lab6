@@ -7,4 +7,4 @@
     - name: deploy_svc.yml을 master에 복사
       copy:
         src: ./deploy_svc.yml
-        dest: /home/user1/deploy_svc.yml
+        dest: /home/user1
