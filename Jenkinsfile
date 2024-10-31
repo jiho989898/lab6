@@ -18,6 +18,7 @@ pipeline {
       steps {
         sh '''
         sudo ansible-playbook ./play.yml
+        sudo ansible-playbook ./play1.yml
         '''
       }
     }
