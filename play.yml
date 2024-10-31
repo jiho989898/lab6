@@ -1,0 +1,10 @@
+---
+- name: deploy,svc
+  hosts: master
+  gather_fact: true
+  become: true
+
+  tasks:
+    - name: deploy_svc.yml -> master
+        src: ./deploy_svc.yml
+        dest: /home/user1/deploy_svc.yml
