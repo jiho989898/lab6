@@ -14,7 +14,7 @@ pipeline {
         '''
       }
     }
-    stage('docker build and push') {
+    stage('deploy -> master') {
       steps {
         sh '''
         ansible-playbook /home/user1/play.yml
