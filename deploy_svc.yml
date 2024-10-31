@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: mytest
 spec:
-  replicas: 1  
+  replicas: 1
   selector:
     matchLabels:
       app: purple
@@ -24,6 +24,9 @@ spec:
     metadata:
       labels:
         app: purple
-    spec:  
-        - containerPort: 80 
- 
+    spec:
+      containers:
+      - name: nginx
+        image: jiho9898/keduinitlab:purple
+        ports:
+        - containerPort: 80
