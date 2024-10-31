@@ -1,0 +1,8 @@
+---
+- name: 서비스 구성 배포
+  hosts: master
+  gather_facts: true
+  become: true
+  tasks:
+    - name: deploy_svc.yml 실행
+      shell: "kubectl apply -f deploy_svc.yml"
