@@ -17,7 +17,7 @@ pipeline {
     stage('deploy and service') {
       steps {
         sh '''
-        sudo kubectl apply -f deploy_lb.yml
+        sudo kubectl apply -f .
         '''
       }
     }
