@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-lb
+spec:
+  selector:
+    app: purple
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mytest
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: purple
+  template:
+    metadata:
+      labels:
+        app: purple
+    spec:  
+        - containerPort: 80 
+ 
